@@ -2,9 +2,11 @@
 [![CI status](https://github.com/puckel/docker-airflow/workflows/CI/badge.svg?branch=master)](https://github.com/puckel/docker-airflow/actions?query=workflow%3ACI+branch%3Amaster+event%3Apush)
 [![Docker Build status](https://img.shields.io/docker/build/puckel/docker-airflow?style=plastic)](https://hub.docker.com/r/puckel/docker-airflow/tags?ordering=last_updated).
 
-I added some tweak to the repository considering the dependencies was upgraded. I spent sometime researching how to downgrade the dependencies using the Dockerfile. We wouldn't be pulling the container from docker hub. Instead, we will be building it from the repository. 
-
 This repository contains **Dockerfile** of [docker-airflow](https://github.com/puckel/docker-airflow) by Puckel and [Airflow tutorial](https://github.com/tuanavu/airflow-tutorial) by Tuan Vu. Puck [automated build](https://registry.hub.docker.com/u/puckel/docker-airflow/). Puckel published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
+
+I added some tweak to the repository considering the that there were some dependencies issues when I tried using the `pandas-gbq` function. I spent sometime researching how to downgrade the dependencies using the Dockerfile. But, I am glad I figured it out.
+
+We wouldn't be pulling the container from docker hub. Instead, we will be building it from this repository. 
 
 ## Informations
 
@@ -13,15 +15,17 @@ This repository contains **Dockerfile** of [docker-airflow](https://github.com/p
 * Install [Docker Compose](https://docs.docker.com/compose/install/)
 * Following the Airflow release from [Python Package Index](https://pypi.python.org/pypi/apache-airflow)
 
+## Getting started
+-   Clone this repo
+-   Install Docker, Docker Compose
+-   Install and Build docker-airflow-dev:latest
 
 ## Build
 
-Optionally install [Extra Airflow Packages](https://airflow.incubator.apache.org/installation.html#extra-package) and/or python dependencies at build time :
+Installation and build.
 
     docker build --rm --build-arg AIRFLOW_DEPS="gcp" -t puckel/docker-airflow-dev .
 
-
-Don't forget to update the airflow images in the docker-compose files to puckel/docker-airflow:latest.
 
 ## Usage
 
