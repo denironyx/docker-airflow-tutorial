@@ -51,3 +51,8 @@ Go to Admin -> Connections and Edit "postgres_default" set this values (equivale
 - Schema : airflow
 - Login : airflow
 - Password : airflow
+
+## Credits
+-   [Apache Airflow](https://github.com/apache/incubator-airflow)
+-   [docker-airflow](https://github.com/puckel/docker-airflow)
+-   [Airflow tutorial](https://github.com/tuanavu/airflow-tutorial)
