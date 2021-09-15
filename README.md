@@ -4,7 +4,7 @@
 
 This repository contains **Dockerfile** of [docker-airflow](https://github.com/puckel/docker-airflow) by Puckel and [Airflow tutorial](https://github.com/tuanavu/airflow-tutorial) by Tuan Vu. Puck [automated build](https://registry.hub.docker.com/u/puckel/docker-airflow/). Puckel published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
 
-I added some tweak to the repository considering the that there were some dependencies issues when I tried using the `pandas-gbq` function. I spent sometime researching how to downgrade the dependencies using the Dockerfile. But, I am glad I figured it out.
+I added some tweak to the repository considering, that there were some dependencies issues when I tried using the `pandas-gbq` function. I spent sometime researching how to downgrade the dependencies using the Dockerfile. But, I am glad I figured it out.
 
 We wouldn't be pulling the container from docker hub. Instead, we will be building it from this repository. 
 
